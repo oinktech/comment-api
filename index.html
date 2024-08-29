@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生成 Firebase API 引用</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>輸入你的 Firebase 配置</h1>
+    <form id="configForm">
+        <label for="apiKey">API Key:</label>
+        <input type="text" id="apiKey" required>
+        
+        <label for="authDomain">Auth Domain:</label>
+        <input type="text" id="authDomain" required>
+        
+        <label for="projectId">Project ID:</label>
+        <input type="text" id="projectId" required>
+        
+        <label for="storageBucket">Storage Bucket:</label>
+        <input type="text" id="storageBucket" required>
+        
+        <label for="messagingSenderId">Messaging Sender ID:</label>
+        <input type="text" id="messagingSenderId" required>
+        
+        <label for="appId">App ID:</label>
+        <input type="text" id="appId" required>
+        
+        <button type="submit">生成 API 引用</button>
+    </form>
+    <script type="module" src="generate.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Basic layout */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header style */
+h1 {
+    margin-bottom: 20px;
+    color: #00bfff;
+    font-size: 28px;
+    text-align: center;
+}
+
+/* Form container */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00bfff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #009acd;
+}
+
+/* Comment section */
+.comment {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#commentsSection {
+    margin-top: 20px;
+}
+
+/* API key display */
+#apiKeyDisplay {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    word-break: break-all;
+    color: #333;
+}
+
+.copy-button {
+    margin-top: 10px;
+    background-color: #00bfff;
+}
+
+.copy-button:hover {
+    background-color: #009acd;
+}
+
+/* Code snippet container */
+#codeSnippet {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    color: #333;
+    font-family: 'Courier New', Courier, monospace;
+    word-break: break-all;
+}
+
+.copy-code-button {
+    margin-top: 10px;
+    background-color: #00bfff;
+}
+
+.copy-code-button:hover {
+    background-color: #009acd;
+}

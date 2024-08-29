@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API 引用生成成功</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>你的 API 引用已生成</h1>
+    <div id="apiKeyDisplay"></div>
+    <button id="copyButton" class="copy-button">複製 API 引用</button>
+
+    <div id="codeSnippet"></div>
+    <button id="copyCodeButton" class="copy-code-button">複製引用程式碼</button>
+
+    <script type="module">
+        const urlParams = new URLSearchParams(window.location.search);
+        const apiKey = urlParams.get('api_key');
+        
+        document.getElementById('apiKeyDisplay').textContent = apiKey;
+
+        const codeSnippet = `
+<iframe src="https://oinktech.github.io/comment.html?api_key=${apiKey}" width="100%" height="500px"></iframe>
+        `;
+        document.getElementById('codeSnippet').textContent = codeSnippet;
+
+        document.getElementById('copyButton').addEventListener('click', () => {
+            navigator.clipboard.writeText(apiKey).then(() => {
+                alert('API 引用已複製到剪貼板');
+            }).catch(err => {
+                alert('複製失敗，請手動複製');
+            });
+        });
+
+        document.getElementById('copyCodeButton').addEventListener('click', () => {
+            navigator.clipboard.writeText(codeSnippet).then(() => {
+                alert('引用程式碼已複製到剪貼板');
+            }).catch(err => {
+                alert('複製失敗，請手動複製');
+            });
+        });
+    </script>
+</body>
+</html>
